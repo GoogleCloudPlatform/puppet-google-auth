@@ -1,6 +1,6 @@
 {
   "name": "google-gauth",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Google",
   "summary": "Authenticates Puppet on Google Cloud Platform.",
   "license": "Apache-2.0",

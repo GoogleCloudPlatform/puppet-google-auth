@@ -140,6 +140,40 @@ If you specify the `serviceaccount` provider this property points to an absolute
 path of the service account file (in JSON format).
 
 
+### Functions
+
+#### `gauth_credential_serviceaccount_for_function`
+
+  Creates the credential token required by other client-side functions to
+  retrieve Google Cloud Platform resource properties, e.g. Compute Instance IP
+  address.
+
+  This function uses a service account JSON file to provide credentials. A
+  service account can be created an managed using Google Cloud IAM service.
+
+  It is common to require dynamic data to be fetched and used by depedent
+  resources, for example to lock down a database to a specific machines you
+  require the machine's IP address. However the IP address is dynamic and cannot
+  be determined upfront, so we need to provide the means to retrieve it
+  programmatically. To allow such access GCP requires credentials. This function
+  builds such credentials.
+
+##### Arguments
+
+  - `path`:
+    the path for the service account credential JSON file
+
+  - `scopes`:
+    an array of scopes to allow access to. The service account privileges will
+    be constrained to the list provided in this parameter.
+
+##### Examples
+
+```puppet
+$fn_auth = gauth_credential_serviceaccount_for_function(
+  '/root/my_account.json', ['https://www.googleapis.com/auth/sqlservice.admin']
+)
+```
 
 
 
