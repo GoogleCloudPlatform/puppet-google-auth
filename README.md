@@ -1,6 +1,6 @@
 # Google Authentication Puppet Module
 
-[![Puppet Forge](http://img.shields.io/puppetforge/v/google/gauth.svg)](https://forge.puppetlabs.com/google/gauth)
+[![Puppet Forge][forge-icon]](https://forge.puppetlabs.com/google/gauth)
 
 ## Module Description
 
@@ -183,3 +183,5 @@ $fn_auth = gauth_credential_serviceaccount_for_function(
 [console]: https://cloud.google.com/console
 [doc-accounts]: https://cloud.google.com/compute/docs/access/service-accounts
 [iam-admin]: https://console.cloud.google.com/iam-admin/serviceaccounts/project
+
+[forge-icon]: http://img.shields.io/puppetforge/v/google/gauth.svg
