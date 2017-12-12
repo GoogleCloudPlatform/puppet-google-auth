@@ -1,5 +1,7 @@
 # Google Authentication Puppet Module
 
+[![Puppet Forge](http://img.shields.io/puppetforge/v/google/gauth.svg)](https://forge.puppetlabs.com/google/gauth)
+
 ## Module Description
 
 This module provides the types to authenticate with Google Cloud Platform.
