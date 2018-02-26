@@ -42,6 +42,28 @@ package { [
 }
 ```
 
+#### Installing gems for Puppet Agent/Master only
+
+In case you wish to use Google gems exclusively on Puppet you can install them
+into the Puppet Ruby sandbox. That will have less requirement burden, as it will
+not require to have `rubygems` and other Ruby packages to be installed on the
+host.
+
+    puppet resource package googleauth ensure=present provider=puppet_gem
+    puppet resource package google-api-client ensure=present provider=puppet_gem
+
+Once executed it will output the confirmation and version installed:
+
+    Notice: /Package[googleauth]/ensure: created
+    package { 'googleauth':
+      ensure => ['0.6.2'],
+    }
+
+    Notice: /Package[google-api-client]/ensure: created
+    package { 'google-api-client':
+      ensure => ['0.19.8'],
+    }
+
 ## Usage
 
 ```puppet
