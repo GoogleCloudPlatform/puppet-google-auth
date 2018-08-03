@@ -2,18 +2,15 @@
   "name": "google-gauth",
   "version": "0.2.0",
   "author": "Google",
-  "summary": "Authenticates Puppet on Google Cloud Platform.",
+  "summary": "Authenticates Puppet on Google Cloud Platform",
   "license": "Apache-2.0",
-  "source": "https://github.com/GoogleCloudPlatform/puppet-google-auth.git",
-  "project_page": "https://github.com/GoogleCloudPlatform/puppet-google-auth/blob/master/README.md",
+  "source": "https://github.com/GoogleCloudPlatform/puppet-google-auth",
+  "project_page": "https://github.com/GoogleCloudPlatform/puppet-google-auth",
   "issues_url": "https://github.com/GoogleCloudPlatform/puppet-google-auth/issues",
-  "data_provider": null,
-  "dependencies": [],
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "5",
         "6",
         "7"
       ]
@@ -21,38 +18,13 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "5",
         "6",
         "7"
-      ]
-    },
-    {
-      "operatingsystem": "OracleLinux",
-      "operatingsystemrelease": [
-        "5",
-        "6",
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "Scientific",
-      "operatingsystemrelease": [
-        "5",
-        "6",
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "SLES",
-      "operatingsystemrelease": [
-        "11 SP1",
-        "12"
       ]
     },
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
-        "6",
         "7",
         "8"
       ]
@@ -60,10 +32,23 @@
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "10.04",
         "12.04",
         "14.04",
-        "16.04"
+        "16.04",
+        "16.10"
+      ]
+    },
+    {
+      "operatingsystem": "SLES",
+      "operatingsystemrelease": [
+        "11-sp4",
+        "12-sp2"
+      ]
+    },
+    {
+      "operatingsystem": "openSUSE",
+      "operatingsystemrelease": [
+        "13"
       ]
     },
     {
@@ -77,6 +62,16 @@
       ]
     }
   ],
-  "requirements": [],
-  "description": "Google Authentication module"
+  "dependencies": [
+
+  ],
+  "tags": [
+    "google",
+    "cloud",
+    "compute",
+    "engine",
+    "gce"
+  ],
+  "data_provider": null,
+  "description": "Authenticates Puppet on Google Cloud Platform"
 }
