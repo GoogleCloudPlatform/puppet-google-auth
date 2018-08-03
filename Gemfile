@@ -18,6 +18,7 @@ gem 'googleauth'
 
 group :test do
   gem 'fakeweb'
+  gem 'parallel_tests'
   gem 'puppet', ENV['PUPPET_GEM_VERSION'] || '~> 4.2.0'
   gem 'puppet-lint'
   gem 'puppet-lint-unquoted_string-check'
@@ -27,12 +28,6 @@ group :test do
   gem 'rspec'
   gem 'rspec-mocks'
   gem 'rspec-puppet'
-  # TODO(alexstephen): Monitor rubocop upsteam changes
-  # https://github.com/bbatsov/rubocop/pull/4329
-  # Change will allow rubocop to use --ignore-parent-exclusion flag
-  # Current rubocop upstream will not check Chef files because of
-  # AllCops/Exclude
-  gem 'rubocop', git: 'https://github.com/nelsonjr/rubocop.git',
-                 branch: 'feature/ignore-parent-exclude'
+  gem 'rubocop'
   gem 'simplecov'
 end
